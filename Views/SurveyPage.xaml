@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SurveysApp.Views.SurveyPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="SurveyPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="20,15" Spacing="20">
+            <Label HorizontalOptions="Center" Text="Encuestas" />
+            <VerticalStackLayout Spacing="20">
+                <Label Text="¿Cuanto es dos más dos?" />
+                <Entry
+                    Keyboard="Numeric"
+                    Placeholder="0"
+                    Text="{Binding Answer1}" />
+                <Label Text="¿Cuanto es el valor de PI?" />
+                <Entry
+                    Keyboard="Numeric"
+                    Placeholder="0"
+                    Text="{Binding Answer2}" />
+                <Label Text="¿Cuanto es diez menos cinco?" />
+                <Entry
+                    Keyboard="Numeric"
+                    Placeholder="0"
+                    Text="{Binding Answer3}" />
+            </VerticalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="40">
+                <Button Command="{Binding ValidateAnswersCommand}" Text="Validar" />
+                <Button Command="{Binding SaveAnswersCommand}" Text="Grabar" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
